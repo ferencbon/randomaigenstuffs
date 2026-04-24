@@ -71,6 +71,14 @@ Use this repository as a starting point for a real project:
 - Add a new ADR when a decision has long-term impact.
 - Expand architecture or domain docs only when the topic becomes non-trivial.
 
+## Template Version
+
+If you need a reusable skeleton instead of the filled sample documents, start with the template entry point:
+
+- [Documentation Template](docs-template/README.md)
+
+Use `docs/` as the filled reference example and `docs-template/` as the copyable starting structure for a new project.
+
 ## Related Documents
 
 - [Architecture Overview](docs/architecture/overview.md)
