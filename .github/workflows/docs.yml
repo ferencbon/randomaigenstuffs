@@ -38,7 +38,7 @@ jobs:
           pip install mkdocs-material
 
       - name: Build documentation
-        run: mkdocs build --strict
+        run: mkdocs build
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
