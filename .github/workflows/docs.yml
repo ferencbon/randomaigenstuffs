@@ -5,8 +5,7 @@ on:
     branches:
       - main
     paths:
-      - README.md
-      - **
+      - docs/**
       - mkdocs.yml
       - .github/workflows/docs.yml
 
@@ -39,11 +38,6 @@ jobs:
           pip install mkdocs-material
           pip install mkdocs-awesome-pages-plugin
           pip install mkdocs-section-index
-
-      - name: Copy README as docs homepage
-        run: |
-          mkdir -p docs
-          cp README.md docs/index.md
 
       - name: Build documentation
         run: mkdocs build --strict
