@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - README.md
-      - docs/**
+      - **
       - mkdocs.yml
       - .github/workflows/docs.yml
 

@@ -1,86 +1,30 @@
 # Greenfield Documentation Sample Repo
 
-## Purpose
+This repository demonstrates a lightweight documentation strategy for a greenfield `.NET` system with multi-tenancy and `Hangfire` background processing.
 
-This repository demonstrates a lightweight documentation strategy for a greenfield `.NET` system that uses a multi-tenant architecture and `Hangfire` for background processing.
+## What This Repo Contains
 
-The goal is not to document everything. The goal is to document the decisions, rules, and operating knowledge that are expensive to rediscover later.
+- a filled sample documentation set under [](index.md)
+- a repo-only reusable template under [docs-template/](docs-template/README.md)
+- MkDocs configuration for publishing the `` content with GitHub Pages
 
-## What This Sample Covers
+## Start With The Documentation
 
-- Entry-point documentation for new engineers
-- Architecture notes for system behavior and technical boundaries
-- ADRs for important technical decisions
-- Domain documents for business rules and workflows
-- A runbook for local development and troubleshooting
+The documentation home lives at [index.md](index.md).
 
-## Core Technologies
+Use that page as the real starting point for:
 
-- `.NET` application services and APIs
-- Multi-tenant request processing and data isolation
-- `Hangfire` for scheduled and asynchronous background jobs
-- Markdown documentation stored in the repo next to the code
+- architecture guidance
+- domain rules and workflows
+- ADRs
+- local development runbooks
 
-## Start Here
+## Repository Roles
 
-Read the documents in this order:
+- `` is the filled reference example that MkDocs publishes.
+- `docs-template/` is the copyable template for a new project and is not part of the public docs site.
+- `README.md` is a short landing page for GitHub visitors, not the full documentation home.
 
-1. [Architecture Overview](docs/architecture/overview.md)
-2. [Tenancy Model](docs/architecture/tenancy.md)
-3. [Background Jobs](docs/architecture/background-jobs.md)
-4. [Business Rules](docs/domain/business-rules.md)
-5. [Workflows](docs/domain/workflows.md)
-6. [Local Development Runbook](docs/runbook/local-development.md)
+## Publishing
 
-For design rationale, read:
-
-- [ADR 001: Hangfire Locking](docs/adr/001-hangfire-locking.md)
-- [ADR 002: Multi-Tenant Model](docs/adr/002-multi-tenant-model.md)
-
-## Documentation Structure
-
-```text
-/README.md
-/docs
-  /architecture
-  /domain
-  /adr
-  /runbook
-```
-
-- `README.md` is the entry point.
-- `docs/architecture` explains how the system works.
-- `docs/domain` explains business meaning and rules in human language.
-- `docs/adr` captures why important technical decisions were made.
-- `docs/runbook` captures how engineers run and troubleshoot the system.
-
-## Documentation Principles
-
-- Document during delivery, not after delivery.
-- Write down non-trivial decisions and rules, not obvious code behavior.
-- Keep documents short enough to stay current.
-- Let code and tests describe exact implementation details.
-- Prefer linking between docs over repeating the same explanation in multiple places.
-
-## How To Use This Repo
-
-Use this repository as a starting point for a real project:
-
-- Keep the structure.
-- Replace sample content with project-specific decisions.
-- Add a new ADR when a decision has long-term impact.
-- Expand architecture or domain docs only when the topic becomes non-trivial.
-
-## Template Version
-
-If you need a reusable skeleton instead of the filled sample documents, start with the template entry point:
-
-- [Documentation Template](docs-template/README.md)
-
-Use `docs/` as the filled reference example and `docs-template/` as the copyable starting structure for a new project.
-
-## Related Documents
-
-- [Architecture Overview](docs/architecture/overview.md)
-- [Business Rules](docs/domain/business-rules.md)
-- [Local Development Runbook](docs/runbook/local-development.md)
+The published site is built from the `` directory through `mkdocs.yml` and the GitHub Pages workflow in `.github/workflows/docs.yml`.

@@ -3,6 +3,22 @@ site_url: https://ferencbon.github.io/randomaigenstuffs/
 
 docs_dir: docs
 
+#nav:
+#  - Home: index.md
+#  - Architecture:
+#      - Overview: architecture/overview.md
+#      - Tenancy: architecture/tenancy.md
+#      - Background Jobs: architecture/background-jobs.md
+#  - Domain:
+#      - Business Rules: domain/business-rules.md
+#      - Workflows: domain/workflows.md
+#      - Glossary: domain/glossary.md
+#  - ADR:
+#      - ADR 001: adr/001-hangfire-locking.md
+#      - ADR 002: adr/002-multi-tenant-model.md
+#  - Runbook:
+#      - Local Development: runbook/local-development.md
+
 theme:
   name: material
 
