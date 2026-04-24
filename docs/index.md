@@ -61,6 +61,24 @@ For design rationale, read:
 - Let code and tests describe exact implementation details.
 - Prefer linking between docs over repeating the same explanation in multiple places.
 
+## System Map
+
+The diagram below shows the main documentation concerns and how they connect in the sample system.
+
+```mermaid
+flowchart TD
+    U["User Request"] --> API[".NET API"]
+    API --> TENANT["Tenant Resolution"]
+    TENANT --> APP["Application / Domain Logic"]
+    APP --> DATA["Tenant-Scoped Data Access"]
+    APP --> JOBS["Hangfire Jobs"]
+    JOBS --> EXT["External Integrations"]
+    JOBS --> OBS["Logs / Metrics"]
+    APP --> ADR["ADR = why"]
+    APP --> DOMAIN["Domain = business meaning"]
+    API --> ARCH["Architecture = how"]
+```
+
 ## How To Use This Repo
 
 Use this repository as a starting point for a real project:
