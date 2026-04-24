@@ -1,1 +1,78 @@
-# randomaigenstuffs
+# Greenfield Documentation Sample Repo
+
+## Purpose
+
+This repository demonstrates a lightweight documentation strategy for a greenfield `.NET` system that uses a multi-tenant architecture and `Hangfire` for background processing.
+
+The goal is not to document everything. The goal is to document the decisions, rules, and operating knowledge that are expensive to rediscover later.
+
+## What This Sample Covers
+
+- Entry-point documentation for new engineers
+- Architecture notes for system behavior and technical boundaries
+- ADRs for important technical decisions
+- Domain documents for business rules and workflows
+- A runbook for local development and troubleshooting
+
+## Core Technologies
+
+- `.NET` application services and APIs
+- Multi-tenant request processing and data isolation
+- `Hangfire` for scheduled and asynchronous background jobs
+- Markdown documentation stored in the repo next to the code
+
+## Start Here
+
+Read the documents in this order:
+
+1. [Architecture Overview](docs/architecture/overview.md)
+2. [Tenancy Model](docs/architecture/tenancy.md)
+3. [Background Jobs](docs/architecture/background-jobs.md)
+4. [Business Rules](docs/domain/business-rules.md)
+5. [Workflows](docs/domain/workflows.md)
+6. [Local Development Runbook](docs/runbook/local-development.md)
+
+For design rationale, read:
+
+- [ADR 001: Hangfire Locking](docs/adr/001-hangfire-locking.md)
+- [ADR 002: Multi-Tenant Model](docs/adr/002-multi-tenant-model.md)
+
+## Documentation Structure
+
+```text
+/README.md
+/docs
+  /architecture
+  /domain
+  /adr
+  /runbook
+```
+
+- `README.md` is the entry point.
+- `docs/architecture` explains how the system works.
+- `docs/domain` explains business meaning and rules in human language.
+- `docs/adr` captures why important technical decisions were made.
+- `docs/runbook` captures how engineers run and troubleshoot the system.
+
+## Documentation Principles
+
+- Document during delivery, not after delivery.
+- Write down non-trivial decisions and rules, not obvious code behavior.
+- Keep documents short enough to stay current.
+- Let code and tests describe exact implementation details.
+- Prefer linking between docs over repeating the same explanation in multiple places.
+
+## How To Use This Repo
+
+Use this repository as a starting point for a real project:
+
+- Keep the structure.
+- Replace sample content with project-specific decisions.
+- Add a new ADR when a decision has long-term impact.
+- Expand architecture or domain docs only when the topic becomes non-trivial.
+
+## Related Documents
+
+- [Architecture Overview](docs/architecture/overview.md)
+- [Business Rules](docs/domain/business-rules.md)
+- [Local Development Runbook](docs/runbook/local-development.md)
